@@ -49,7 +49,7 @@ Stack::~Stack() {
 	delete[]m_data;
 }
 void Stack::pop() {
-	if (!(is_empty)) {
+	if (!is_empty()) {
 		--m_top;
 	}
 
