@@ -9,7 +9,7 @@ Stack::Stack()
 	,max_size(MAX_SIZE)
 	,m_data(nullptr)
 {
-	m_data = new int [MAX_SIZE];
+	m_data = new int [MAX_SIZE];	// add "{}" on every "new"
 }	// add new line
 Stack::Stack(int top, const int* data) 
 	:m_top(top)
