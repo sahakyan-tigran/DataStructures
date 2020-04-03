@@ -19,7 +19,7 @@ queue::queue(const int* data, int size)
 	for (int i = 0; i <= m_rear; ++i) {
 		m_data[i] = data[i];
 	}
-}
+}	// remove
 
 queue::queue(const queue& object) 
 	: max_size(object.max_size)
@@ -30,7 +30,7 @@ queue::queue(const queue& object)
 	for (int i = 0; i < max_size; ++i) {
 		m_data[i] = object.m_data[i];
 	}
-}
+}	// let's talk about this during lesson
 
 queue& queue::operator=(const queue& object) {
 	if (this != &object) {
@@ -44,7 +44,7 @@ queue& queue::operator=(const queue& object) {
 		}
 	}
 	return *this;
-}
+}	// let's talk about this during lesson
 
 queue::~queue() {
 	delete[] m_data;
@@ -63,7 +63,7 @@ int queue::size() const {
 	else {
 		return max_size - (m_front - m_rear - 1);
 	}
-}
+}	// maybe it would be better to have a member m_size
 
 void queue::push(int element) {
 	if (is_empty()) {
@@ -108,7 +108,7 @@ void queue::push(int element) {
 	else {
 		m_data[++m_rear] = element;
 	}
-}
+}	// function is too long
 
 void queue::pop() {
 	if (is_empty()) {
@@ -126,5 +126,6 @@ void queue::pop() {
 		++m_front;
 	}
 }
+// maybe you need full function
 
 
