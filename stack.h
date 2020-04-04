@@ -3,13 +3,12 @@
 class Stack {
 public:
 	Stack();
-	Stack(int, const int*);	// unnecessary c-tor
 	Stack(const Stack&);
 	Stack& operator=(const Stack&);
 	~Stack();
 
 	int size() const { return m_top + 1; }	 
-	bool is_empty() const { return m_top == -1; }	// return m_top == -1
+	bool is_empty() const { return m_top == -1; }	
 	int& top();
 	const int& top() const;
 
