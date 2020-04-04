@@ -10,16 +10,6 @@ Stack::Stack()
 	m_data = new int [MAX_SIZE]{};	
 }	
 
-Stack::Stack(int top, const int* data) 
-	: m_top(top)
-	, m_max_size((top>MAX_SIZE) ? 2 * top : MAX_SIZE)
-	, m_data(nullptr)
-{	
-	m_data = new int[m_max_size]{};
-	for (int i = 0;i < m_top + 1;++i) {
-		m_data[i] = data[i];
-	}
-}	// remove the function
 Stack::Stack(const Stack& obj) 
 	: m_top (obj.m_top)
 	, m_max_size(obj.m_max_size)
