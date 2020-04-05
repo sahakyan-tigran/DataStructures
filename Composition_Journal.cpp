@@ -104,3 +104,4 @@ int main() {
 	j.avg(18.0);
 	return 0;
 }
+
