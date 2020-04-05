@@ -41,7 +41,7 @@ private:
 	int m_size;
 	Student* m_students;
 };
-Journal::Journal() :m_max_size(MAX_SIZE), m_size(0), m_students(nullptr) { m_students = new Student[m_max_size]; }
+Journal::Journal() : m_max_size(MAX_SIZE), m_size(0), m_students(nullptr) { m_students = new Student[m_max_size]; }
 Journal::~Journal() { delete[] m_students; }
 
 const Student& Journal::operator[](int index) const {
@@ -50,6 +50,7 @@ const Student& Journal::operator[](int index) const {
 	}
 	return m_students[index];
 }
+
 void Journal::add_student(const Student& obj) {
 	if (m_size + 1 == m_max_size) {
 		m_max_size *= 2;
@@ -62,6 +63,7 @@ void Journal::add_student(const Student& obj) {
 	}
 	m_students[++m_size] = obj;
 }
+
 void Journal::remove_student(int index) {
 	if (index <= 0 || index > m_size) {
 		throw std::exception("Index is out of journal.");
@@ -76,6 +78,7 @@ void Journal::remove_student(int index) {
 	}
 	--m_size;
 }
+
 void Journal::avg(double number) {
 	for (int i = 1;i <= m_size;++i) {
 		if (m_students[i].get_avg() >= number) {
@@ -83,6 +86,8 @@ void Journal::avg(double number) {
 		}
 	}
 }
+
+
 int main() {
 	Student a("a", 910), b("b", 911), c("c", 912), d("d", 913), e("e", 914);
 	a.set_avg(16.5);
