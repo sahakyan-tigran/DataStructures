@@ -5,8 +5,8 @@ const int MAX_SIZE=100;
 
 class Student {
 public:
-	Student() : m_name(""),m_group(0),m_avg(0.0) {}
-	Student(const std::string& name,int group) :m_name(name),m_group(group),m_avg(0) {}
+	Student() : m_name("") , m_group(0) , m_avg(0.0) {}
+	Student(const std::string& name,int group) : m_name(name) , m_group(group) , m_avg(0) {}
 	
 	const std::string& get_name() const { return m_name; }
 	int get_group() const { return m_group; }
