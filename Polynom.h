@@ -1,7 +1,5 @@
 #pragma once
 
-#include <iostream>
-
 class Polynom {
 	friend std::ostream& operator<<(std::ostream&, const Polynom&);
 public:
